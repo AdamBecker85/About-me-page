@@ -1,0 +1,274 @@
+/* Global */
+
+$color-main: #ff5e57;
+$color-light: #fff;
+$font-text: 'Playfair Display', serif;
+$font-header: 'Source Sans Pro', sans-serif;
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    text-align: center;
+    background: #fff;
+    color: #3d3d3d;
+    font-size: 16px;
+    line-height: 1.7;
+    font-family: $font-text;
+}
+    
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section {
+    padding: 108px 0;
+}
+
+.section-title {
+    position: relative;
+    font-size: 36px;
+    margin: 0 0 60px 0;
+    font-family: $font-header;
+}
+
+/* Splash */
+
+.splash {
+    height: 100vh;
+    position: relative;
+    background-image: url('https://images.pexels.com/photos/450035/pexels-photo-450035.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.splash-inner {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.splash i {
+    font-size: 35px;
+    background: $color-main;
+    width: 60px;
+    height: 60px;
+    line-height: 30px;
+    color: $color-light;
+    border-radius: 5%;
+}
+
+.page-title {
+    color: $color-light;
+    font-size: 60px;
+    margin: 48px 0 0 0;
+    font-family: $font-header;
+}
+
+.page-title::after {
+    position: absolute;
+    content: '';
+    bottom: 54px;
+    left: 50%;
+    width: 100px;
+    height: 10px;
+    transform: translate(-50%);
+    background: $color-main;
+}
+
+.page-subtitle {
+    color: $color-light;
+    font-size: 18px;
+    margin: 48px 0 0 0;
+}
+
+/* Intro */
+
+.intro {
+    background: $color-light;
+}
+
+.intro p {
+    width: 70%;
+    margin: 0 auto;
+    padding: 48px 0; 
+    font-size:24px;
+    border-top:1px solid #3d3d3d;
+    border-bottom:1px solid #3d3d3d;
+}
+
+.section-title::after {
+    position: absolute;
+    content: '';
+    bottom: -12px;
+    left: 50%;
+    width: 50px;
+    height: 10px;
+    transform: translate(-50%);
+    background: $color-main;
+}
+
+/* About */
+
+.about {
+    background: #f0f0f0;
+}
+
+/* Skills */
+
+[class^="skill-"] {
+    position: relative;
+}
+
+.skill-image {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.skill-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 2s;
+    z-index:2;
+    position: relative;    
+}
+
+.skill-right .skill-image {
+    right: 0;
+}
+
+.skill-right .skill-description {
+    padding: 36px 55% 36px 0;
+    text-align: right;
+}
+
+.skill-left .skill-description {
+    padding: 36px 0 36px 55%;
+    text-align: left;
+}
+
+.skill-image img:hover {
+    transform: scale(2);
+}
+
+/* Gallery */
+
+.gallery {
+    padding: 0;
+    margin: 0 auto;
+}
+
+
+.row {
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+}
+
+.gallery-card {
+    position: relative;
+    float: left;    
+    width: calc(100%/3);
+    height: 200px;
+}
+
+img {
+    height: 200px;
+    width: 100%;
+}
+
+.gallery-card-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .3);
+    padding-top: 40px;
+    display: none;
+}
+
+.gallery-card:hover .gallery-card-inner{
+    display: block;
+}
+
+.gallery-card-inner-text {
+    color: $color-light;
+    font-size: 12px;
+}
+
+
+.button {
+    background: #ee5253;
+    border: none;
+    color: $color-light;
+    padding: 5px 5px;
+    text-align: center;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.row::before,
+.row::after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+/* Contact */
+
+.contact {
+    background: #171717;
+}
+
+.contact h2 {
+    color: $color-light;
+}
+
+.contact input,
+.contact textarea {
+    border: 1px solid #a0b3b0;
+    width: 450px;
+    padding: 10px 10px;
+    margin: 5px auto;
+    font-family: $font-text;
+    display: block;
+    
+}
+
+fieldset {
+    border: 0;
+}
+
+.button {
+    background: #ee5253;
+    border: none;
+    color: $color-light;
+    padding: 10px 30px;
+    text-align: center;
+    margin: 10px;
+}
+
+/* Footer */
+
+.footer {
+    background: #242424;
+    height: 50px;
+    padding: 1px 0;    
+}
+
+.footer p {
+    color: $color-light;
+    margin: 0;
+    padding-top: 10px;
+    }
